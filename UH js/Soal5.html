@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="hargaBarang">Harga Barang: </label>
+    <input type="number" id="hargaBarang"><br>
+    
+    <label for="uangDibayarkan">Uang Dibayarkan: </label>
+    <input type="number" id="uangDibayarkan"><br>
+  
+    <input type="button" value="Hitung Kembalian" onclick="hitungKembalian()">
+    
+    <p id="hasilKembalian"></p>
+  
+    <script>
+      function hitungKembalian() {
+        var hargaBarang = parseFloat(document.getElementById("hargaBarang").value);
+        var uangDibayarkan = parseFloat(document.getElementById("uangDibayarkan").value);
+  
+        var kembalian = uangDibayarkan - hargaBarang;
+  
+        if (kembalian >= 0) {
+          document.getElementById("hasilKembalian").innerHTML = "Kembalian: " + kembalian;
+        } else {
+          document.getElementById("hasilKembalian").innerHTML = "Uang yang dibayarkan kurang. Mohon bayar lebih.";
+        }
+      }
+    </script>
+    <form action="index.html">
+        <br>
+        <button type="submit">Kembali</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Panjang sisi a: <input type="number" id="sideA"><br>
+        <br>
+        Panjang sisi b: <input type="number" id="sideB"><br>
+        <br>
+        Panjang sisi c: <input type="number" id="sideC"><br>
+        <br>
+        Panjang sisi d: <input type="number" id="sideD"><br>
+        <br>
+        <input type="button" value="Hitung Keliling" onclick="hitungKeliling()">
+      </form>
+      
+      <p id="hasilKeliling"></p>
+
+      <script>
+        function hitungKeliling() {
+          var a = parseFloat(document.getElementById("sideA").value);
+          var b = parseFloat(document.getElementById("sideB").value);
+          var c = parseFloat(document.getElementById("sideC").value);
+          var d = parseFloat(document.getElementById("sideD").value);
+    
+          var keliling = a + b + c + d;
+    
+          document.getElementById("hasilKeliling").innerHTML = "Keliling trapesium sama kaki = " + keliling;
+        }
+      </script>
+      <form action="index.html">
+        <br>
+        <button type="submit">Kembali</button>
+    </form>
+</body>
+</html>
